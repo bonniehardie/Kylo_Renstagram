@@ -1,6 +1,12 @@
 
 This project was completed as part of the App Academy curriculum. Implementation by Bonnie Hardie.
 
+## Technologies
+- Express
+- PostgreSQL
+- React/Redux
+- Material UI
+
 ## Project description
 Kylo_Renstagram is a clone of Instagram, with the following features:
 
