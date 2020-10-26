@@ -1,3 +1,18 @@
+
+This project was completed as part of the App Academy curriculum. Implementation by Bonnie Hardie.
+
+## Project description
+Kylo_Renstagram is a clone of Instagram, with the following features:
+
+- Profile page displaying bio, avatar, and picture grid
+- Users can: post pictures, like pictures, delete pictures, comment on other users pictures
+- Demo user
+
+Bonus features:
+- Users can follow other users
+- Users can message other users
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
