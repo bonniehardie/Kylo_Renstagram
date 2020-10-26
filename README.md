@@ -5,8 +5,9 @@ This project was completed as part of the App Academy curriculum. Implementation
 Kylo_Renstagram is a clone of Instagram, with the following features:
 
 - Profile page displaying bio, avatar, and picture grid
-- Users can: post pictures, like pictures, delete pictures, comment on other users pictures
-- Demo user
+- Logged-in users can: post pictures, like pictures, delete pictures, comment on other users pictures
+- Demo user experience available
+- Non-logged-in users will be redirected to sign-up page
 
 Bonus features:
 - Users can follow other users
