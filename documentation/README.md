@@ -1,12 +1,6 @@
 
 This project was completed as part of the App Academy curriculum. Implementation by Bonnie Hardie.
 
-## Technologies
-- Express
-- PostgreSQL
-- React/Redux
-- Material UI
-
 ## Project description
 Kylo_Renstagram is a clone of Instagram, with the following features:
 
@@ -15,9 +9,30 @@ Kylo_Renstagram is a clone of Instagram, with the following features:
 - Demo user experience available
 - Non-logged-in users will be redirected to sign-up page
 
-Bonus features:
-- Users can follow other users
-- Users can message other users
+
+## Technologies
+- Express
+- PostgreSQL
+- React/Redux
+- Material UI
+
+## Backend Routes
+    GET /
+    GET /sign-up
+    GET /create
+    GET users/userList
+    POST users/,
+    POST users/token
+    GET users/:id (include Photos)
+    GET photos/ (include Comments, include Likes)
+    POST photos/add
+    GET photos/:id(\\d+)
+    PUT photos/:id(\\d+)
+    DELETE photos/:id(\\d+)
+    GET photos/:id(\\d+)/comments (include Users)
+    POST photos/:id(\\d+)/comments
+
+## Frontend Routes
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
