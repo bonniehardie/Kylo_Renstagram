@@ -17,23 +17,21 @@ Kylo_Renstagram is a clone of Instagram, with the following features:
 - Material UI
 
 ## Backend Routes
-    GET /
-    GET /sign-up
-    GET /create
-    GET users/userList
-    POST users/,
+
+    POST users/
     POST users/token
-    GET users/:id (include Photos)
-    GET photos/ (include Comments, include Likes)
-    POST photos/add
-    GET photos/:id(\\d+)
+    GET users/:id (include Photos, include Comments, include Likes)
+    POST photos/
+    GET photos/:id(\\d+) (include Comments, , include Users, include Likes)
     PUT photos/:id(\\d+)
     DELETE photos/:id(\\d+)
-    GET photos/:id(\\d+)/comments (include Users)
     POST photos/:id(\\d+)/comments
 
 ## Frontend Routes
-
+    GET /
+    GET /sign-up
+    GET /create
+    
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
