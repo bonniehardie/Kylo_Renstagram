@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import useAsyncEffect from './useAsyncEffect';
-import { getCats } from '../routes/api/cats';
+import { getCats } from '../routes/api/photos';
 
-export const useCats = () => {
-    const [cats, setCats] = useState([]);
+export const usePhotos = () => {
+    const [photos, setPhotos] = useState([]);
     useAsyncEffect(async() => {
-        setCats(await getCats());
+        setPhotos(await getPhotos());
     },[]);
-    return cats;
+    return photos;
 }
