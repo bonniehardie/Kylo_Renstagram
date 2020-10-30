@@ -1,9 +1,13 @@
 import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
+import MyCard from './MyCard';
+import { usePhotos } from './hooks/photos';
+// import { useComments } from './hooks/comments';
+
 
 const Home = () => {
-  const photos = usePhotos();
-
+  const photos = usePhotos(1);
+  // const comments = useComments();
   return (
     <Grid
       container
@@ -13,28 +17,17 @@ const Home = () => {
       alignItems="flex-start"
     >
       <Grid item>
-        <Typography variant="h4" color="primary">Cats</Typography>
-        {cats.map((cat) => (
+        <Typography variant="h4" color="primary">Photos</Typography>
+        {photos.map((photo) => (
           <MyCard
-            key={cat.id}
-            title={cat.id}
-            subheader="This is a cat, isn't it cute?"
-            image={cat.url}
+            key={photo.id}
+            title={photo.id}
+            subheader={photo.caption}
+            image ={photo.photoUrl}
           >
-            <p>{cat.url}</p>
+            <p>{photo.photoUrl}</p>
           </MyCard>
         ))}
-      </Grid>
-      <Grid item>
-        <Typography variant="h4" color="secondary">Dogs</Typography>
-        {dogs.map(dog => (
-          <MyCard
-            key={dog}
-            title={dog}
-            subheader="This is a dog!"
-            image={dog}
-          />
-          ))}
       </Grid>
     </Grid>
   );

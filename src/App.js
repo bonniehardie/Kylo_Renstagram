@@ -4,17 +4,11 @@ import NavBar from './NavBar';
 import Theme from './Theme';
 import Home from './Home';
 
-// function App() {
-//   return (
-//     <h1>Hello world!</h1>
-//   );
-// }
-
 function App() {
   return (
     <>
-      <CssBaseline />
       <Theme>
+        <CssBaseline />
         <NavBar />
         <Home/>
       </Theme>

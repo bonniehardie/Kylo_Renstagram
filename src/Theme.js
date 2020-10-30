@@ -1,14 +1,14 @@
 import React from 'react';
-import { ThemeProvider, createMuiTheme } from '@material-ui/core';
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
-  fontFamily: 'Noto Sans',
+
   palette: {
+    primary: {
+      main: '#e53935'
+    },
     type: 'dark'
   },
-  typography: {
-    fontFamily: 'Roboto Condensed'
-  }
 });
 
 const Theme = props => {
