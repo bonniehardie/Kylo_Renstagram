@@ -1,15 +1,13 @@
 import React from 'react';
-import { Grid, Typography } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import Square from './Square';
 import { usePhotos } from './hooks/photos';
 import { makeStyles } from '@material-ui/core/styles';
 
 
-export default function SpacingGrid() {
-  const [spacing, setSpacing] = React.useState(2);
-  const classes = useStyles();
 
-const useStyles = makeStyles(theme => ({
+
+const useStyles = makeStyles( () => ({
 
   paper: {
     height: '100px',
@@ -19,6 +17,8 @@ const useStyles = makeStyles(theme => ({
 
 const Profile = () => {
   const photos = usePhotos(1);
+  const [spacing, setSpacing] = React.useState(2);
+  const classes = useStyles();
 
   return (
     <Grid container >
@@ -26,7 +26,7 @@ const Profile = () => {
         <Grid container justify="center" spacing={spacing}>
           {photos.map((photo) => (
             <Grid key={photo.id} item>
-              <Square image={photo.photoUrl} className={classes.square} />
+              <Square className={classes.square} />
             </Grid>
           ))}
         </Grid>

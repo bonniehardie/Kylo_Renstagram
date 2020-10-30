@@ -3,15 +3,18 @@ import { CssBaseline } from "@material-ui/core";
 import NavBar from './NavBar';
 import Theme from './Theme';
 import Profile from './Profile';
+import SignIn from './Sign-In';
 
 function App() {
   return (
     <>
-      <Theme>
+      {/* <Theme>
         <CssBaseline />
         <NavBar />
         <Profile/>
-      </Theme>
+
+      </Theme> */}
+      <SignIn />
     </>
   );
 }
