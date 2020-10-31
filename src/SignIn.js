@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
+import { login } from "./store/actions/auth";
+import signInKylo from "./signInKylo.png"
+
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
@@ -32,10 +33,10 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
   },
   image: {
-    backgroundImage: 'url(https://source.unsplash.com/random)',
+    backgroundImage: `url(${signInKylo})`,
     backgroundRepeat: 'no-repeat',
-    backgroundColor:
-      theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
+    // backgroundColor:
+    //   theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   },
@@ -55,13 +56,17 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+    backgroundColor: theme.palette.secondary.main,
+  },
+  typography: {
+    color: theme.palette.primary.main
   },
 }));
 
-export default function SignInSide() {
+export default function SignIn() {
   const classes = useStyles();
 
-  const [userName, setUserName] = useState('') // react hook
+  const [userName, setUserName] = useState('')
   const [password, setPassword] = useState('')
 
   const dispatch = useDispatch();
@@ -87,11 +92,12 @@ export default function SignInSide() {
           <Avatar className={classes.avatar}>
             <LockOutlinedIcon />
           </Avatar>
-          <Typography component="h1" variant="h5">
-            Sign In
+          <Typography className={classes.typography} component="h1" variant="h5">
+            
           </Typography>
           <form className={classes.form} onSubmit={handleSubmit} noValidate>
             <TextField
+              onChange={updateUserName}
               variant="outlined"
               margin="normal"
               required
@@ -103,6 +109,7 @@ export default function SignInSide() {
               autoFocus
             />
             <TextField
+              onChange={updatePassword}
               variant="outlined"
               margin="normal"
               required
@@ -113,10 +120,6 @@ export default function SignInSide() {
               id="password"
               autoComplete="current-password"
             />
-            {/* <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            /> */}
             <Button
               type="submit"
               fullWidth
@@ -126,18 +129,6 @@ export default function SignInSide() {
             >
               Sign In
             </Button>
-            <Grid container>
-              <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
-                </Link>
-              </Grid>
-            </Grid>
             <Box mt={5}>
               <Copyright />
             </Box>
